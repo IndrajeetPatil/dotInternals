@@ -1,0 +1,17 @@
+Package: dotInternal
+Type: Package
+Title: Prepend Internal Package Function Names With a Dot
+Version: 0.1.0
+Authors@R: 
+    person(given = "Indrajeet",
+           family = "Patil",
+           role = c("cre", "aut", "cph"),
+           email = "patilindrajeet.science@gmail.com",
+           comment = c(ORCID = "0000-0003-1995-6531", Twitter = "@patilindrajeets"))
+Maintainer: Indrajeet Patil <patilindrajeet.science@gmail.com>
+Description: Utilities to distinguish non-exported package functions by 
+    prepending their names with a dot.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.2.0
+Roxygen: list(markdown = TRUE)
