@@ -17,6 +17,8 @@ RoxygenNote: 7.2.0
 Roxygen: list(markdown = TRUE)
 Imports: 
     desc,
+    fs,
     purrr,
     rlang,
-    sloop
+    sloop,
+    xfun

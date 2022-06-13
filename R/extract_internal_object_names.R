@@ -31,5 +31,5 @@ extract_internal_function_names <- function() {
 
 
 .extract_functions_from_environment <- function(env) {
-    purrr::keep(as.list(env), rlang::is_function)
+  purrr::keep(as.list(env), rlang::is_function)
 }
