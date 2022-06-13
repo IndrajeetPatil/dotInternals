@@ -3,25 +3,33 @@
 #' @import rlang
 #'
 #' @export
-extract_internal_object_names <- function() {
+extract_internal_function_names <- function() {
   package_name <- desc::desc_get("Package")
 
-  # extract a list of internal objects by subtracting exported from all objects
-  exported_objects <- getNamespaceExports(package_name)
-  all_objects <- ls(getNamespace(package_name), all.names = TRUE)
-  internal_objects <- setdiff(all_objects, exported_objects)
+  # to bring the library on the search path
+  library(package_name, character.only = TRUE)
+  on.exit(detach(), add = TRUE)
 
-  # remove internal objects that already have a `.` prefix
-  internal_objects <- purrr::discard(internal_objects, ~startsWith(.x, prefix = "."))
+  # exported ---------------
 
-  # get a list of all S3 methods, which won't be included in `getNamespaceExports()`
-  s3_method_names <- env_names(eval(call2(":::", package_name, expr(.__S3MethodsTable__. ))))
+  package_env <- pkg_env(package_name)
+  exported_fns <- .extract_functions_from_environment(package_env)
+  exported_fn_names <- names(exported_fns)
 
-  # exclude these methods
-  internal_objects <- setdiff(internal_objects, s3_method_names)
+  # all ---------------
 
-  # there might still be S3 methods left if they belong to generics defined in base package
-  internal_objects <- purrr::discard(internal_objects, ~grepl(x = .x, pattern = "(\\w+)(\\.)(\\w+)"))
+  namespace_env <- ns_env(package_name)
+  all_fns <- .extract_functions_from_environment(namespace_env)
+  all_fn_names <- names(all_fns[!purrr::map_lgl(names(all_fns), sloop::is_s3_method)])
 
-  return(internal_objects)
+  # internal ---------------
+
+  internal_fn_names <- setdiff(all_fn_names, exported_fn_names)
+
+  return(internal_fn_names)
+}
+
+
+.extract_functions_from_environment <- function(env) {
+    purrr::keep(as.list(env), rlang::is_function)
 }
