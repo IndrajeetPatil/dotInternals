@@ -1,0 +1,4 @@
+Name: Dot Internalize active package
+Description: Prefixes internal functions with a dot in the active package.
+Binding: dot_internals
+Interactive: true
