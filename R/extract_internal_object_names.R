@@ -21,7 +21,7 @@ extract_internal_object_names <- function() {
   internal_objects <- setdiff(internal_objects, s3_method_names)
 
   # there might still be S3 methods left if they belong to generics defined in base package
-  purrr::discard(ls, ~grepl(x = .x, pattern = "(\\w+)(\\.)(\\w+)"))
+  internal_objects <- purrr::discard(internal_objects, ~grepl(x = .x, pattern = "(\\w+)(\\.)(\\w+)"))
 
   return(internal_objects)
 }
