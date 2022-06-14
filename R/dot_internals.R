@@ -13,7 +13,7 @@
 #' @export
 dot_internals <- function() {
   if (isFALSE(.is_package())) {
-    cli::cli_abort("This function can only be run in the package root directory.")
+    cli_abort("This function can only be run in the package root directory.")
   }
 
   files <- .find_source_files()
@@ -23,4 +23,9 @@ dot_internals <- function() {
     .x = fn_names,
     .f = ~ xfun::gsub_files(files, .x, paste0(".", .x))
   )
+
+  # UI messages
+  cli_alert_success("Internal function names successfully changed.")
+  cli_alert_warning("Please review the changes carefully!")
+  cli_alert_info("Re-document with `roxygen2::roxygenise()`.")
 }
