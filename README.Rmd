@@ -20,11 +20,29 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of dotInternals is to ...
+The goal of `{dotInternals}` is to set apart names of internal functions from the ones exported by adding a dot (`.`) in front of their name. 
+
+For example, here are how functions can be renamed depending on whether they are exported or not:
+
+- For **exported functions**, names will not be changed:
+
+```{r, eval=FALSE}
+# before        ---> after
+extract_value() ---> extract_value() 
+.draw_graph()   ---> .draw_graph()
+```
+
+- For **non-exported functions**, names will be prepended with a `.`, but only if it isn't already named that way:
+
+```{r, eval=FALSE}
+# before        ---> after
+extract_value() ---> .extract_value() 
+.draw_graph()   ---> .draw_graph()
+```
 
 ## Installation
 
-You can install the development version of dotInternals from [GitHub](https://github.com/) with:
+You can install the development version of `{dotInternals}` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
