@@ -20,15 +20,15 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of `{dotInternals}` is to set apart names of internal functions from the ones exported by adding a dot (`.`) in front of their name. 
+The goal of `{dotInternals}` is to set apart names of internal functions from the ones exported by adding a dot (`.`) in front of their name. The package automates this task in a scalable manner, which comes in handy for large legacy projects with tons of internal functions.
 
-This may stem from either your personal taste or from team/organization's coding guidelines. The package automates this task in a scalable manner, which comes in handy for large legacy projects with tons of internal functions.
+Having a separate naming pattern for exported versus non-exported functions brings clarity to both users and developers about the public API of the package.
 
 For example, here are how functions can be renamed depending on whether they are exported or not:
 
 - For **exported functions**, names will not be changed:
 
-```{r, eval=FALSE}
+```r
 # before        ---> after
 extract_value() ---> extract_value() 
 .draw_graph()   ---> .draw_graph()
@@ -36,7 +36,7 @@ extract_value() ---> extract_value()
 
 - For **non-exported functions**, names will be prepended with a `.`, but only if it isn't already named that way:
 
-```{r, eval=FALSE}
+```r
 # before        ---> after
 extract_value() ---> .extract_value() 
 .draw_graph()   ---> .draw_graph()
@@ -44,7 +44,7 @@ extract_value() ---> .extract_value()
 
 There is an exception to this rule: `S3`/`S4` methods will not be renamed, even if it is not exported.
 
-```{r, eval=FALSE}
+```r
 # before        ---> after
 str.my_class()  ---> str.my_class() 
 ```

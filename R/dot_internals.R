@@ -9,13 +9,15 @@
 #'
 #' @export
 dot_internals <- function() {
+  if (isFALSE(.is_package())) {
+    cli::cli_abort("This function can only be run in the package root directory.")
+  }
+
+  files <- .find_source_files()
+  fn_names <- .extract_internal_function_names()
+
   purrr::walk(
-    .extract_internal_function_names(),
-    ~ xfun::gsub_files(
-      files = fs::dir_ls(".", recurse = TRUE, glob = "*.R$|*.Rmd$"),
-      .x,
-      paste0(".", .x),
-      fixed = TRUE
-    )
+    .x = fn_names,
+    .f = ~ xfun::gsub_files(files, .x, paste0(".", .x))
   )
 }

@@ -6,6 +6,10 @@
 \usage{
 dot_internals()
 }
+\value{
+Changed \code{.R} and \code{.Rmd} files with all instances of internal functions
+replaced with their new "dotted" versions.
+}
 \description{
 Prepend internal functions with a dot
 }
