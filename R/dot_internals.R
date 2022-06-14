@@ -2,6 +2,9 @@
 #'
 #' @description
 #'
+#' ```{r child="man/rmd-fragments/dot_internals.Rmd"}
+#' ```
+#'
 #' @return
 #'
 #' Changed `.R` and `.Rmd` files with all instances of internal functions

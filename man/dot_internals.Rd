@@ -11,5 +11,31 @@ Changed \code{.R} and \code{.Rmd} files with all instances of internal functions
 replaced with their new "dotted" versions.
 }
 \description{
-Prepend internal functions with a dot
+The goal of \code{{dotInternals}} is to set apart names of internal functions from the ones exported by adding a dot (\code{.}) in front of their name. The package automates this task in a scalable manner, which comes in handy for large legacy projects with tons of internal functions.
+
+Having a separate naming pattern for exported versus non-exported functions brings clarity to both users and developers about the public API of the package.
+
+For example, here are how functions can be renamed depending on whether they are exported or not:
+\itemize{
+\item For \strong{exported functions}, names will not be changed:
+}
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{# before        ---> after
+extract_value() ---> extract_value() 
+.draw_graph()   ---> .draw_graph()
+}\if{html}{\out{</div>}}
+\itemize{
+\item For \strong{non-exported functions}, names will be prepended with a \code{.}, but only if it isn't already named that way:
+}
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{# before        ---> after
+extract_value() ---> .extract_value() 
+.draw_graph()   ---> .draw_graph()
+}\if{html}{\out{</div>}}
+
+There is an exception to this rule: \code{S3}/\code{S4} methods will not be renamed, even if it is not exported.
+
+\if{html}{\out{<div class="sourceCode r">}}\preformatted{# before        ---> after
+str.my_class()  ---> str.my_class() 
+}\if{html}{\out{</div>}}
 }

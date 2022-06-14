@@ -8,15 +8,18 @@
 [![Codecov test
 coverage](https://codecov.io/gh/IndrajeetPatil/dotInternals/branch/main/graph/badge.svg)](https://app.codecov.io/gh/IndrajeetPatil/dotInternals?branch=main)
 [![R-CMD-check](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 The goal of `{dotInternals}` is to set apart names of internal functions
-from the ones exported by adding a dot (`.`) in front of their name.
+from the ones exported by adding a dot (`.`) in front of their name. The
+package automates this task in a scalable manner, which comes in handy
+for large legacy projects with tons of internal functions.
 
-This may stem from either your personal taste or from
-team/organization’s coding guidelines. The package automates this task
-in a scalable manner, which comes in handy for large legacy projects
-with tons of internal functions.
+Having a separate naming pattern for exported versus non-exported
+functions brings clarity to both users and developers about the public
+API of the package.
 
 For example, here are how functions can be renamed depending on whether
 they are exported or not:
