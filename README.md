@@ -38,8 +38,8 @@ extract_value() ---> .extract_value()
 .draw_graph()   ---> .draw_graph()
 ```
 
-There is an exception to this rule: `S3` methods won’t be renamed, even
-if it is not exported.
+There is an exception to this rule: `S3`/`S4` methods will not be
+renamed, even if it is not exported.
 
 ``` r
 # before        ---> after
