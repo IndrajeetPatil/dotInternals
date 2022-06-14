@@ -1,4 +1,4 @@
-Package: dotInternal
+Package: dotInternals
 Type: Package
 Title: Prepend Internal Package Function Names With a Dot
 Version: 0.1.0
@@ -22,3 +22,6 @@ Imports:
     rlang,
     sloop,
     xfun
+Suggests: 
+    testthat (>= 3.1.0)
+Config/testthat/edition: 3

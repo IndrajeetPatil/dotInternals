@@ -1,9 +1,7 @@
 #' @title Extract names of internal package objects
 #'
-#' @import rlang
-#'
-#' @export
-extract_internal_function_names <- function() {
+#' @keywords internal
+.extract_internal_function_names <- function() {
   package_name <- desc::desc_get("Package")
 
   # to bring the library on the search path
@@ -29,7 +27,8 @@ extract_internal_function_names <- function() {
   return(internal_fn_names)
 }
 
-
+#' @keywords internal
+#' @noRd
 .extract_functions_from_environment <- function(env) {
   purrr::keep(as.list(env), rlang::is_function)
 }
