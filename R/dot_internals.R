@@ -1,5 +1,12 @@
 #' @title Prepend internal functions with a dot
 #'
+#' @description
+#'
+#' @return
+#'
+#' Changed `.R` and `.Rmd` files with all instances of internal functions
+#' replaced with their new "dotted" versions.
+#'
 #' @export
 dot_internals <- function() {
   purrr::walk(

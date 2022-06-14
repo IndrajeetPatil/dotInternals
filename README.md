@@ -13,6 +13,11 @@ coverage](https://codecov.io/gh/IndrajeetPatil/dotInternals/branch/main/graph/ba
 The goal of `{dotInternals}` is to set apart names of internal functions
 from the ones exported by adding a dot (`.`) in front of their name.
 
+This may stem from either your personal taste or from
+team/organization’s coding guidelines. The package automates this task
+in a scalable manner, which comes in handy for large legacy projects
+with tons of internal functions.
+
 For example, here are how functions can be renamed depending on whether
 they are exported or not:
 
@@ -31,6 +36,14 @@ extract_value() ---> extract_value()
 # before        ---> after
 extract_value() ---> .extract_value() 
 .draw_graph()   ---> .draw_graph()
+```
+
+There is an exception to this rule: `S3` methods won’t be renamed, even
+if it is not exported.
+
+``` r
+# before        ---> after
+str.my_class()  ---> str.my_class() 
 ```
 
 ## Installation
