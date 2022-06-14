@@ -56,8 +56,8 @@
 <div class="page-header"><h1 id="dotinternals">dotInternals<a class="anchor" aria-label="anchor" href="#dotinternals"></a>
 </h1></div>
 <!-- badges: start -->
-<p>The goal of <code>{dotInternals}</code> is to set apart names of internal functions from the ones exported by adding a dot (<code>.</code>) in front of their name.</p>
-<p>This may stem from either your personal taste or from team/organization’s coding guidelines. The package automates this task in a scalable manner, which comes in handy for large legacy projects with tons of internal functions.</p>
+<p>The goal of <code>{dotInternals}</code> is to set apart names of internal functions from the ones exported by adding a dot (<code>.</code>) in front of their name. The package automates this task in a scalable manner, which comes in handy for large legacy projects with tons of internal functions.</p>
+<p>Having a separate naming pattern for exported versus non-exported functions brings clarity to both users and developers about the public API of the package.</p>
 <p>For example, here are how functions can be renamed depending on whether they are exported or not:</p>
 <ul><li>For <strong>exported functions</strong>, names will not be changed:</li></ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># before        ---&gt; after</span></span>
@@ -119,6 +119,7 @@
 <ul class="list-unstyled">
 <li><a href="https://app.codecov.io/gh/IndrajeetPatil/dotInternals?branch=main" class="external-link"><img src="https://codecov.io/gh/IndrajeetPatil/dotInternals/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 </ul>
 </div>
 
