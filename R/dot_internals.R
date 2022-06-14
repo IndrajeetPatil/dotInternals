@@ -28,4 +28,6 @@ dot_internals <- function() {
   cli_alert_success("Internal function names successfully changed.")
   cli_alert_warning("Please review the changes carefully!")
   cli_alert_info("Re-document with `roxygen2::roxygenise()`.")
+
+  invisible()
 }
