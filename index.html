@@ -57,6 +57,7 @@
 </h1></div>
 <!-- badges: start -->
 <p>The goal of <code>{dotInternals}</code> is to set apart names of internal functions from the ones exported by adding a dot (<code>.</code>) in front of their name.</p>
+<p>This may stem from either your personal taste or from team/organization’s coding guidelines. The package automates this task in a scalable manner, which comes in handy for large legacy projects with tons of internal functions.</p>
 <p>For example, here are how functions can be renamed depending on whether they are exported or not:</p>
 <ul><li>For <strong>exported functions</strong>, names will not be changed:</li></ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># before        ---&gt; after</span></span>
@@ -66,11 +67,14 @@
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># before        ---&gt; after</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">extract_value</span>() <span class="sc">--</span><span class="ot">-&gt;</span> <span class="fu">.extract_value</span>() </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.draw_graph</span>()   <span class="sc">--</span><span class="ot">-&gt;</span> <span class="fu">.draw_graph</span>()</span></code></pre></div>
+<p>There is an exception to this rule: <code>S3</code> methods won’t be renamed, even if it is not exported.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># before        ---&gt; after</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str.my_class</span>()  <span class="sc">--</span><span class="ot">-&gt;</span> <span class="fu">str.my_class</span>() </span></code></pre></div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the development version of <code>{dotInternals}</code> from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"IndrajeetPatil/dotInternals"</span><span class="op">)</span></code></pre></div>
 </div>
