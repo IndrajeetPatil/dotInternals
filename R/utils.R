@@ -6,7 +6,7 @@
   package_name <- desc::desc_get("Package")
 
   # to bring the library on the search path
-  library(package_name, character.only = TRUE)
+  library(package_name, character.only = TRUE, quietly = TRUE)
   on.exit(detach(), add = TRUE)
 
   # exported
