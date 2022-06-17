@@ -27,7 +27,9 @@ Imports:
     rprojroot,
     sloop,
     xfun
-Suggests: 
+Suggests:
+    pkgbuild,
+    pkgload,
     testthat (>= 3.1.0),
     withr
 Config/testthat/edition: 3

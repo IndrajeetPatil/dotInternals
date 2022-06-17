@@ -9,3 +9,17 @@ test_that("it produces expected message when no internal functions are found", {
     expect_snapshot(dot_internals())
   })
 })
+
+test_that("it changes only internal *function* names without `.` prefix", {
+  pkg <- test_path("assets/pkg-with-internals")
+
+  withr::with_dir(pkg, {
+    pkgbuild::build(quiet = TRUE)
+    expect_snapshot(dotInternals:::.extract_internal_function_names())
+    pkgload::unload()
+  })
+
+  expect_false(desc::desc_get("Package", pkg) %in% loadedNamespaces())
+})
+
+

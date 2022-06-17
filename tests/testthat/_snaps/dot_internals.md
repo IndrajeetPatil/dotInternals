@@ -9,3 +9,10 @@
     Message <cliMessage>
       i There are no internal functions whose names need to be changed.
 
+# it changes only internal *function* names without `.` prefix
+
+    Code
+      dotInternals:::.extract_internal_function_names()
+    Output
+      [1] "if1" "if2"
+
