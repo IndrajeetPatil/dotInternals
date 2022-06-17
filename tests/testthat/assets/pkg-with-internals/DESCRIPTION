@@ -1,8 +1,6 @@
-Package: testpackage
+Package: testpackage1
 Version: 1.0.0
 Title: A test package
 Description: A longer statement about the package.
-Authors@R: c(
-  person("xyz", "abc", , "bla@bla.com", role = c("aut", "cre"))
-)
-RoxygenNote: 6.0.1
+Authors@R: person("xyz", "abc", , "bla@bla.com", role = c("aut", "cre"))
+RoxygenNote: 7.2.0
