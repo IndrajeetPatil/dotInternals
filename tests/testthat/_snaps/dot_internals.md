@@ -2,12 +2,10 @@
 
     This function can only be run in the package root directory.
 
-# it produces expected messages when run inside a package
+# it produces expected message when no internal functions are found
 
     Code
       dot_internals()
     Message <cliMessage>
-      v Internal function names successfully changed.
-      ! Please review the changes carefully!
-      i Re-document with `roxygen2::roxygenise()`.
+      i There are no internal functions whose names need to be changed.
 

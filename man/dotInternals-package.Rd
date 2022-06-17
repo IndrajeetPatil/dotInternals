@@ -6,7 +6,7 @@
 \alias{dotInternals-package}
 \title{dotInternals: Prepend Internal Package Function Names With a Dot}
 \description{
-Utilities to distinguish non-exported package functions by prepending their names with a dot.
+Utilities to distinguish non-exported package functions by prepending their names with a dot. This can help clarify public API from internal utilities.
 }
 \author{
 \strong{Maintainer}: Indrajeet Patil \email{patilindrajeet.science@gmail.com} (\href{https://orcid.org/0000-0003-1995-6531}{ORCID}) (@patilindrajeets) [copyright holder]

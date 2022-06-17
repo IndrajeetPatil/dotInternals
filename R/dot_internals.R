@@ -19,12 +19,16 @@ dot_internals <- function() {
   files <- .find_source_files()
   fn_names <- .extract_internal_function_names()
 
+  if (length(fn_names) == 0L) {
+    cli_alert_info("There are no internal functions whose names need to be changed.")
+    return(invisible())
+  }
+
   purrr::walk(
     .x = fn_names,
     .f = ~ xfun::gsub_files(files, .x, paste0(".", .x))
   )
 
-  # UI messages
   cli_alert_success("Internal function names successfully changed.")
   cli_alert_warning("Please review the changes carefully!")
   cli_alert_info("Re-document with `roxygen2::roxygenise()`.")

@@ -10,11 +10,14 @@ Authors@R:
            comment = c(ORCID = "0000-0003-1995-6531", Twitter = "@patilindrajeets"))
 Maintainer: Indrajeet Patil <patilindrajeet.science@gmail.com>
 Description: Utilities to distinguish non-exported package functions by 
-    prepending their names with a dot.
+    prepending their names with a dot. This can help clarify public API from 
+    internal utilities.
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.2.0
 Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 3.6.0)
 Imports: 
     cli,
     desc,

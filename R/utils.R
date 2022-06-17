@@ -2,6 +2,7 @@
 #' @keywords internal
 #' @noRd
 .extract_internal_function_names <- function() {
+  # `{desc}` uses the `DESCRIPTION` file of the package in the working directory
   package_name <- desc::desc_get("Package")
 
   # to bring the library on the search path
@@ -26,14 +27,14 @@
 
 #' @keywords internal
 #' @noRd
-.is_S3_or_S4_method <- function(x) {
-  sloop::is_s3_method(x) || isS4(x)
+.extract_functions_from_environment <- function(env) {
+  purrr::keep(as.list(env), rlang::is_function)
 }
 
 #' @keywords internal
 #' @noRd
-.extract_functions_from_environment <- function(env) {
-  purrr::keep(as.list(env), rlang::is_function)
+.is_S3_or_S4_method <- function(x) {
+  sloop::is_s3_method(x) || isS4(x)
 }
 
 #' @keywords internal
@@ -50,5 +51,5 @@
 #' @keywords internal
 #' @noRd
 .find_source_files <- function() {
-  fs::dir_ls(".", recurse = TRUE, glob = "*.R$|*.Rmd$")
+  fs::dir_ls(path = ".", recurse = TRUE, glob = "*.R$|*.Rmd$")
 }
