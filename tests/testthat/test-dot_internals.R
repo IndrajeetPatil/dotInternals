@@ -47,6 +47,8 @@ test_that("it changes function names", {
     pkgload::load_all(quiet = TRUE)
     expect_snapshot(dotInternals::dot_internals())
 
+    expect_false(env_has(ns_env(desc::desc_get("Package")), ".if1a"))
+
     pkgload::unload(quiet = TRUE)
   })
 

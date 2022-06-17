@@ -1,5 +1,8 @@
 if1 <- function() NULL
 
+#' @export
+if1a <- function() NULL
+
 #' bla
 #' @keywords internal
 if2 <- function() NULL
