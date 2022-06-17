@@ -24,14 +24,19 @@ dot_internals <- function() {
     return(invisible())
   }
 
+  cli_inform("Prefixing names of {length(fn_names)} internal functions with a `.`")
+  purrr::walk(fn_names, ~ cli_li("{.fn {.x}}"))
+
   purrr::walk(
     .x = fn_names,
     .f = ~ xfun::gsub_files(files, .x, paste0(".", .x))
   )
 
+  cli_rule()
   cli_alert_success("Internal function names successfully changed.")
   cli_alert_warning("Please review the changes carefully!")
   cli_alert_info("Re-document with `roxygen2::roxygenise()`.")
+  cli_rule()
 
   invisible()
 }

@@ -22,6 +22,9 @@
   # internal
   internal_fn_names <- setdiff(all_fn_names, exported_fn_names)
 
+  # remove names which already are prepended with a `.`
+  internal_fn_names <- purrr::discard(internal_fn_names, ~ startsWith(.x, "."))
+
   return(internal_fn_names)
 }
 
