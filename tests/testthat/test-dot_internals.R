@@ -10,16 +10,21 @@ test_that("it produces expected message when no internal functions are found", {
   })
 })
 
+build_file <- paste0(rprojroot::find_testthat_root_file(), "/assets/testpackage1_1.0.0.tar.gz")
+
 test_that("it changes only internal *function* names without `.` prefix", {
   pkg <- test_path("assets/pkg-with-internals")
 
   withr::with_dir(pkg, {
     pkgbuild::build(quiet = TRUE)
     expect_snapshot(dotInternals:::.extract_internal_function_names())
-    pkgload::unload()
+    pkgload::unload(quiet = TRUE)
   })
 
-  expect_false(desc::desc_get("Package", pkg) %in% loadedNamespaces())
+  unlink(build_file, recursive = TRUE, force = TRUE)
 })
 
-
+test_that("check clean up", {
+  expect_false("testpackage1" %in% loadedNamespaces())
+  expect_false(file.exists(build_file))
+})
