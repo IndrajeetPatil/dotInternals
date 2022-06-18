@@ -29,7 +29,7 @@ dot_internals <- function() {
 
   purrr::walk(
     .x = fn_names,
-    .f = ~ xfun::gsub_files(files, .x, paste0(".", .x))
+    .f = ~ xfun::gsub_files(files, paste0("^", .x, "$"), paste0(".", .x), fixed = TRUE)
   )
 
   cli_rule()
