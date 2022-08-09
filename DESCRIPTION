@@ -14,6 +14,8 @@ Description: Utilities to distinguish non-exported package functions by
     internal utilities.
 License: MIT + file LICENSE
 Encoding: UTF-8
+URL: https://indrajeetpatil.github.io/dotInternals/, https://github.com/IndrajeetPatil/dotInternals
+BugReports: https://github.com/IndrajeetPatil/dotInternals/issues
 RoxygenNote: 7.2.1
 Roxygen: list(markdown = TRUE)
 Depends: 

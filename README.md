@@ -1,13 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# dotInternals
+# `{dotInternals}`: Dot Package Internal Functions <img src="man/figures/logo.png" align="right" width="240" />
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/IndrajeetPatil/dotInternals/branch/main/graph/badge.svg)](https://app.codecov.io/gh/IndrajeetPatil/dotInternals?branch=main)
-[![R-CMD-check](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
@@ -24,7 +24,7 @@ API of the package.
 For example, here are how functions can be renamed depending on whether
 they are exported or not:
 
--   For **exported functions**, names will not be changed:
+- For **exported functions**, names will not be changed:
 
 ``` r
 # before        ---> after
@@ -32,8 +32,8 @@ extract_value() ---> extract_value()
 .draw_graph()   ---> .draw_graph()
 ```
 
--   For **non-exported functions**, names will be prepended with a `.`,
-    but only if it isn’t already named that way:
+- For **non-exported functions**, names will be prepended with a `.`,
+  but only if it isn’t already named that way:
 
 ``` r
 # before        ---> after

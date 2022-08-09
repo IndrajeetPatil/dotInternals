@@ -5,7 +5,7 @@ library(magick)
 library(showtext)
 
 # Loading Google fonts (http://www.google.com/fonts)
-font_add_google("Roboto")
+font_add_google("Lato")
 
 # Automatically use showtext to render text for future devices
 showtext_auto()
@@ -16,7 +16,7 @@ sticker(
   closet,
   package = "dotInternals",
   p_color	= "black",
-  p_family = "Roboto",
+  p_family = "Lato",
   p_size = 40,
   s_x = 1,
   s_y = .75,
