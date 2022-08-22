@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# `{dotInternals}`: Dot Package Internal Functions
+# `{dotInternals}`: Dot Package Internal Functions <img src="man/figures/logo.png" align="right" width="240" />
 
 <!-- badges: start -->
 
@@ -11,8 +11,6 @@ coverage](https://codecov.io/gh/IndrajeetPatil/dotInternals/branch/main/graph/ba
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
-
-<img src="man/figures/logo.png" align="right" width="300" />
 
 The goal of `{dotInternals}` is to set apart names of internal functions
 from the ones exported by adding a dot (`.`) in front of their name. The
