@@ -13,13 +13,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-# `{dotInternals}`: Dot Package Internal Functions <img src="man/figures/logo.png" align="right" width="240" />
+# `{dotInternals}`: Dot Package Internal Functions 
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/IndrajeetPatil/dotInternals/branch/main/graph/badge.svg)](https://app.codecov.io/gh/IndrajeetPatil/dotInternals?branch=main)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
+
+<img src="man/figures/logo.png" align="right" width="300" />
 
 ```{r child="man/rmd-fragments/dot_internals_description.Rmd"}
 ```
