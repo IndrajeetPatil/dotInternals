@@ -1,4 +1,4 @@
-testthat::skip_on_cran()
+skip_on_ci()
 
 test_that("it produces error outside of package", {
   expect_snapshot_error(withr::with_tempdir({

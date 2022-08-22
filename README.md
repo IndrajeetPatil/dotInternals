@@ -14,15 +14,21 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 The goal of `{dotInternals}` is to set apart names of internal functions
 from the ones exported by adding a dot (`.`) in front of their name. The
-package automates this task in a scalable manner, which comes in handy
-for large legacy projects with tons of internal functions.
+package automates this task in a scalable manner, and can be a nifty
+tool for large legacy projects with tons of internal functions.
 
 Having a separate naming pattern for exported versus non-exported
 functions brings clarity to both users and developers about the public
 API of the package.
 
-For example, here are how functions can be renamed depending on whether
-they are exported or not:
+You need to run this function in the **package root directory**. There
+is also RStudio addin that you can use.
+
+**Note**: This will not work if you have already run
+`devtools::load_all()`/`pkgload::load_all()`.
+
+Here is how functions will be renamed depending on whether they are
+exported or not:
 
 - For **exported functions**, names will not be changed:
 
@@ -58,6 +64,12 @@ You can install the development version of `{dotInternals}` from
 # install.packages("remotes")
 remotes::install_github("IndrajeetPatil/dotInternals")
 ```
+
+## Acknowledgments
+
+Hex sticker font is [Lato](https://fonts.google.com/specimen/Lato), and
+the free clip-art image is taken from
+[http://clipart-library.com](http://clipart-library.com/clipart/495897.htm).
 
 ## Code of Conduct
 

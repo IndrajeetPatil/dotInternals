@@ -21,7 +21,10 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-```{r child="man/rmd-fragments/dot_internals.Rmd"}
+```{r child="man/rmd-fragments/dot_internals_description.Rmd"}
+```
+
+```{r child="man/rmd-fragments/dot_internals_details.Rmd"}
 ```
 
 ## Installation
@@ -32,6 +35,11 @@ You can install the development version of `{dotInternals}` from [GitHub](https:
 # install.packages("remotes")
 remotes::install_github("IndrajeetPatil/dotInternals")
 ```
+
+## Acknowledgments
+
+Hex sticker font is [Lato](https://fonts.google.com/specimen/Lato), and the free clip-art image is taken from
+[http://clipart-library.com](http://clipart-library.com/clipart/495897.htm).
 
 ## Code of Conduct
 

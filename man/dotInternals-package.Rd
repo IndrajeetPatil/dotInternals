@@ -6,7 +6,18 @@
 \alias{dotInternals-package}
 \title{dotInternals: Prepend Internal Package Function Names With a Dot}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Utilities to distinguish non-exported package functions by prepending their names with a dot. This can help clarify public API from internal utilities.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://indrajeetpatil.github.io/dotInternals/}
+  \item \url{https://github.com/IndrajeetPatil/dotInternals}
+  \item Report bugs at \url{https://github.com/IndrajeetPatil/dotInternals/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Indrajeet Patil \email{patilindrajeet.science@gmail.com} (\href{https://orcid.org/0000-0003-1995-6531}{ORCID}) (@patilindrajeets) [copyright holder]

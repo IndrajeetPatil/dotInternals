@@ -2,13 +2,23 @@
 #'
 #' @description
 #'
-#' ```{r child="man/rmd-fragments/dot_internals.Rmd"}
+#' ```{r child="man/rmd-fragments/dot_internals_description.Rmd"}
 #' ```
 #'
+#' @details
+#'
+#' ```{r child="man/rmd-fragments/dot_internals_details.Rmd"}
+#' ```
 #' @return
 #'
 #' Changed `.R` and `.Rmd` files with all instances of internal functions
 #' replaced with their new "dotted" versions.
+#'
+#' @examples
+#' if (FALSE) {
+#'   # Assuming you are in the package root directory
+#'   dot_internals()
+#' }
 #'
 #' @export
 dot_internals <- function() {

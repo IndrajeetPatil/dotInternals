@@ -1,8 +1,4 @@
-The goal of `{dotInternals}` is to set apart names of internal functions from the ones exported by adding a dot (`.`) in front of their name. The package automates this task in a scalable manner, which comes in handy for large legacy projects with tons of internal functions.
-
-Having a separate naming pattern for exported versus non-exported functions brings clarity to both users and developers about the public API of the package.
-
-For example, here are how functions can be renamed depending on whether they are exported or not:
+Here is how functions will be renamed depending on whether they are exported or not:
 
 - For **exported functions**, names will not be changed:
 

@@ -15,7 +15,7 @@ closet <- image_read("hextools/closet.jpeg")
 sticker(
   closet,
   package = "dotInternals",
-  p_color	= "black",
+  p_color = "black",
   p_family = "Lato",
   p_size = 40,
   s_x = 1,

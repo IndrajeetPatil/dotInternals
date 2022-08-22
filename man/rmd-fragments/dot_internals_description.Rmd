@@ -1,0 +1,7 @@
+The goal of `{dotInternals}` is to set apart names of internal functions from the ones exported by adding a dot (`.`) in front of their name. The package automates this task in a scalable manner, and can be a nifty tool for large legacy projects with tons of internal functions.
+
+Having a separate naming pattern for exported versus non-exported functions brings clarity to both users and developers about the public API of the package.
+
+You need to run this function in the **package root directory**. There is also RStudio addin that you can use. 
+
+**Note**: This will not work if you have already run `devtools::load_all()`/`pkgload::load_all()`.
