@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# `{dotInternals}`: Dot Package Internal Functions <img src="man/figures/logo.png" align="right" width="240" />
+# `{dotInternals}`: Dot Package Internal Functions <img src="man/figures/logo.png" align="right" width="300" />
 
 <!-- badges: start -->
 

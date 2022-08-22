@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# `{dotInternals}`: Dot Package Internal Functions <img src="man/figures/logo.png" align="right" width="240" />
+# `{dotInternals}`: Dot Package Internal Functions <img src="man/figures/logo.png" align="right" width="300" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/IndrajeetPatil/dotInternals/actions/workflows/R-CMD-check.yaml)
