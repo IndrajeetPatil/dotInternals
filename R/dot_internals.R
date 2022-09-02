@@ -35,7 +35,7 @@ dot_internals <- function() {
   }
 
   cli_inform("Prefixing names of {length(fn_names)} internal functions with a `.`")
-  purrr::walk(fn_names, ~ cli_li("{.fn {.x}}"))
+  purrr::walk(sort(fn_names), ~ cli_li("{.fn {.x}}"))
 
   purrr::walk(
     .x = fn_names,

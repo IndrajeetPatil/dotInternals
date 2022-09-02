@@ -7,15 +7,16 @@
     Code
       dotInternals:::.extract_internal_function_names()
     Output
-      [1] "if1" "if2"
+      [1] "a1"  "if1" "if2"
 
 # it changes function names
 
     Code
       dotInternals::dot_internals()
     Message <rlang_message>
-      Prefixing names of 2 internal functions with a `.`
+      Prefixing names of 3 internal functions with a `.`
     Message <cliMessage>
+      * `a1()`
       * `if1()`
       * `if2()`
       --------------------------------------------------------------------------------
