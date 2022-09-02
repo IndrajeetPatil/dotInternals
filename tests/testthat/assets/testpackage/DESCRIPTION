@@ -1,6 +1,7 @@
-Package: testpackage1
+Package: testpackage
 Version: 1.0.0
 Title: A test package
 Description: A longer statement about the package.
 Authors@R: person("xyz", "abc", , "bla@bla.com", role = c("aut", "cre"))
-RoxygenNote: 7.2.0
+Encoding: UTF-8
+RoxygenNote: 7.2.1
