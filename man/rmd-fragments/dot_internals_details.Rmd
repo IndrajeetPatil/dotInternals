@@ -22,3 +22,15 @@ There is an exception to this rule: `S3`/`S4` methods will not be renamed, even 
 # before        ---> after
 str.my_class()  ---> str.my_class() 
 ```
+
+A few important things to keep in mind:
+
+  - You need to run this function in the **package root directory**. 
+  
+  - The package needs to be **installed**, rather than just sourced. 
+  
+  - If you have run `dot_internals()` once and wish to run it again, you need to build the package before doing so.
+  
+  - The function will not work if you have run   `devtools::load_all()`/`pkgload::load_all()`.
+  
+  - There is also RStudio addin that you can use. 

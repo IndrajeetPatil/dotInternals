@@ -14,10 +14,6 @@ replaced with their new "dotted" versions.
 The goal of \code{{dotInternals}} is to set apart names of internal functions from the ones exported by adding a dot (\code{.}) in front of their name. The package automates this task in a scalable manner, and can be a nifty tool for large legacy projects with tons of internal functions.
 
 Having a separate naming pattern for exported versus non-exported functions brings clarity to both users and developers about the public API of the package.
-
-You need to run this function in the \strong{package root directory}. There is also RStudio addin that you can use.
-
-\strong{Note}: This will not work if you have already run \code{devtools::load_all()}/\code{pkgload::load_all()}.
 }
 \details{
 Here is how functions will be renamed depending on whether they are exported or not:
@@ -43,6 +39,15 @@ There is an exception to this rule: \code{S3}/\code{S4} methods will not be rena
 \if{html}{\out{<div class="sourceCode r">}}\preformatted{# before        ---> after
 str.my_class()  ---> str.my_class() 
 }\if{html}{\out{</div>}}
+
+A few important things to keep in mind:
+\itemize{
+\item You need to run this function in the \strong{package root directory}.
+\item The package needs to be \strong{installed}, rather than just sourced.
+\item If you have run \code{dot_internals()} once and wish to run it again, you need to build the package before doing so.
+\item The function will not work if you have run   \code{devtools::load_all()}/\code{pkgload::load_all()}.
+\item There is also RStudio addin that you can use.
+}
 }
 \examples{
 if (FALSE) {

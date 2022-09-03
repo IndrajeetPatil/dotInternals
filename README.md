@@ -21,12 +21,6 @@ Having a separate naming pattern for exported versus non-exported
 functions brings clarity to both users and developers about the public
 API of the package.
 
-You need to run this function in the **package root directory**. There
-is also RStudio addin that you can use.
-
-**Note**: This will not work if you have already run
-`devtools::load_all()`/`pkgload::load_all()`.
-
 Here is how functions will be renamed depending on whether they are
 exported or not:
 
@@ -54,6 +48,20 @@ renamed, even if it is not exported.
 # before        ---> after
 str.my_class()  ---> str.my_class() 
 ```
+
+A few important things to keep in mind:
+
+- You need to run this function in the **package root directory**.
+
+- The package needs to be **installed**, rather than just sourced.
+
+- If you have run `dot_internals()` once and wish to run it again, you
+  need to build the package before doing so.
+
+- The function will not work if you have run
+  `devtools::load_all()`/`pkgload::load_all()`.
+
+- There is also RStudio addin that you can use.
 
 ## Installation
 
