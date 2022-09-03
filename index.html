@@ -77,8 +77,6 @@
 <!-- badges: start -->
 <p>The goal of <a href="https://indrajeetpatil.github.io/dotInternals/">dotInternals</a> is to set apart names of internal functions from the ones exported by adding a dot (<code>.</code>) in front of their name. The package automates this task in a scalable manner, and can be a nifty tool for large legacy projects with tons of internal functions.</p>
 <p>Having a separate naming pattern for exported versus non-exported functions brings clarity to both users and developers about the public API of the package.</p>
-<p>You need to run this function in the <strong>package root directory</strong>. There is also RStudio addin that you can use.</p>
-<p><strong>Note</strong>: This will not work if you have already run <code>devtools::load_all()</code>/<code><a href="https://pkgload.r-lib.org/reference/load_all.html" class="external-link">pkgload::load_all()</a></code>.</p>
 <p>Here is how functions will be renamed depending on whether they are exported or not:</p>
 <ul><li>For <strong>exported functions</strong>, names will not be changed:</li></ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># before        ---&gt; after</span></span>
@@ -91,6 +89,14 @@
 <p>There is an exception to this rule: <code>S3</code>/<code>S4</code> methods will not be renamed, even if it is not exported.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># before        ---&gt; after</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str.my_class</span>()  <span class="sc">--</span><span class="ot">-&gt;</span> <span class="fu">str.my_class</span>() </span></code></pre></div>
+<p>A few important things to keep in mind:</p>
+<ul>
+<li><p>You need to run this function in the <strong>package root directory</strong>.</p></li>
+<li><p>The package needs to be <strong>installed</strong>, rather than just sourced.</p></li>
+<li><p>If you have run <code><a href="reference/dot_internals.html">dot_internals()</a></code> once and wish to run it again, you need to build the package before doing so.</p></li>
+<li><p>The function will not work if you have run <code>devtools::load_all()</code>/<code><a href="https://pkgload.r-lib.org/reference/load_all.html" class="external-link">pkgload::load_all()</a></code>.</p></li>
+<li><p>There is also RStudio addin that you can use.</p></li>
+</ul>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
