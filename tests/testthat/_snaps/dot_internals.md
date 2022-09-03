@@ -23,6 +23,7 @@
       v Internal function names successfully changed.
       ! Please review the changes carefully!
       i Re-document with `roxygen2::roxygenise()`.
+      i Please rebuild the package before using this function again.
       --------------------------------------------------------------------------------
 
 ---
